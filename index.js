@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS Configuration
 app.use(cors({
-    origin: "https://blog-app-frontend-beryl.vercel.app", // Frontend URL
+    origin: "*", // Frontend URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
