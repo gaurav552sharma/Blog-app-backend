@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS Configuration
 app.use(cors({
-    origin: "*", // Frontend URL
+    origin: 'http://localhost:3000', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
