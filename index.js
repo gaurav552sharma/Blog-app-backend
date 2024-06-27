@@ -13,12 +13,24 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// CORS Configuration
-app.use(cors({
-    origin: 'https://blog-app-frontend-qnro7aq6m-gaurav-sharmas-projects-668f5bd3.vercel.app', 
+
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://blog-app-frontend-qnro7aq6m-gaurav-sharmas-projects-668f5bd3.vercel.app'
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
-}));
+  }));
+  
 
 app.use(upload());
 app.use('/uploads', express.static(__dirname + '/uploads'));
