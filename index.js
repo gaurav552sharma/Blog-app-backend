@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS Configuration
 app.use(cors({
-    origin: 'http://localhost:3000', 
+    origin: 'https://blog-app-frontend-qnro7aq6m-gaurav-sharmas-projects-668f5bd3.vercel.app/', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
