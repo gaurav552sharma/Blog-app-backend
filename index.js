@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://blog-app-frontend-qnro7aq6m-gaurav-sharmas-projects-668f5bd3.vercel.app'
+    'https://blog-app-frontend-p9pszd1sx-gaurav-sharmas-projects-668f5bd3.vercel.app/'
   ];
   
   app.use(cors({
